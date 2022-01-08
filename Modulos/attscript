@@ -70,19 +70,19 @@ fun_atts () {
 
 } > /dev/null 2>&1
 
-echo -e "                              \033[1;31mGÊNIO HACKER MANAGER\033[1;36m"
+echo -e "                              \033[1;31mMSC PERU PANEL\033[1;36m"
 
-echo -e "   GENIO HACKER" | figlet
+echo -e "   MSC PERÚ" | figlet
 
 echo " "
 
-echo -e "   \033[1;32mVERIFICANDO ATUALIZACOES DISPONIVEIS\033[0m\n"
+echo -e "   \033[1;32mVERIFICANDO ACTUALIZACIÓN DISPONIBLES\033[0m\n"
 
 fun_bar 'fun_atts'
 
 [[ ! -f "/tmp/att" ]] && {
 
-	echo -e "\n\033[1;31m ERRO AO CONECTAR AO SERVIDOR\n"
+	echo -e "\n\033[1;31m ERROR EN CONECTAR AO SERVIDOR\n"
 
 	echo -ne "\033[1;31m ENTER \033[1;33mpara retornar ao \033[1;32mMENU!\033[0m"; read
 
@@ -102,7 +102,7 @@ vrs2=$(sed -n '1 p' /tmp/att | sed -e 's/[^0-9]//ig')
 
   rm /tmp/att > /dev/null 2>&1
 
-  echo -e " \033[1;33m MAIS INFORMACOES \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@OOGENIOHACKER\n"
+  echo -e " \033[1;33m MAIS INFORMACOES \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@MSCPERU\n"
 
   echo -ne " \033[1;31m ENTER \033[1;33mpara retornar ao \033[1;32mMENU!\033[0m"; read
 
