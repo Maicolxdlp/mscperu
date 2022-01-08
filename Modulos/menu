@@ -536,6 +536,12 @@ case "$x" in
    limit_ssh
    echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar al \033[1;32mMENU!\033[0m"; read
    ;;
+   j)
+   clear
+   userbackup
+   echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar al \033[1;32mMENU!\033[0m"; read
+
+   ;;
    p)
    menu2
    ;;
