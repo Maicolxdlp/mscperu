@@ -2,7 +2,7 @@
 #====================================================
 #	@oogeniohacker
 #====================================================
-_lvk=$(wget -qO- https://raw.githubusercontent.com/ogenio/OGENIO-SSHPLUS/master/Sistema/versao)
+_lvk=$(wget -qO- https://raw.githubusercontent.com/Maicolxdlp/mscperu/main/Sistema/versao)
 IP=$(wget -qO- ipv4.icanhazip.com)
 IP2=$(wget -qO- http://whatismyip.akamai.com/)
 [[ "$IP" != "$IP2" ]] && ipdovps="$IP2" || ipdovps="$IP"
