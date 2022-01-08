@@ -262,11 +262,6 @@ echo -ne "\033[1;32mNome do usuário:\033[1;37m ";read username
 	echo -e "\n${cor1}Este usuário já existe. tente outro nome!${scor}\n"
 	exit 1
 }
-[[ ${username} != ?(+|-)+([a-zA-Z0-9]) ]] && {
-	echo -e "\n${cor1}Você digitou um nome de usuário inválido!${scor}"
-	echo -e "${cor1}Não use espaços, acentos ou caracteres especiais!${scor}\n"
-	exit 1
-}
 sizemin=$(echo ${#username})
 [[ $sizemin -lt 2 ]] && {
 	echo -e "\n${cor1}Você digitou um nome de usuário muito curto${scor}"
@@ -274,9 +269,9 @@ sizemin=$(echo ${#username})
 	exit 1
 }
 sizemax=$(echo ${#username})
-[[ $sizemax -gt 10 ]] && {
+[[ $sizemax -gt 25 ]] && {
 	echo -e "\n${cor1}Você digitou um nome de usuário muito grande"
-	echo -e "${cor1}use no máximo 10 caracteres!${scor}\n"
+	echo -e "${cor1}use no máximo 25 caracteres!${scor}\n"
 	exit 1
 }
 echo -ne "\033[1;32mSenha:\033[1;37m ";read password
