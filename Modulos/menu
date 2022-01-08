@@ -230,7 +230,7 @@ _userexp=$(printf '%-5s' "$_expuser")
 _tuser=$(awk -F: '$3>=1000 {print $1}' /etc/passwd | grep -v nobody | wc -l)
 clear
 echo -e "\033[01;31m▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣\033[0m"
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%55s%s%-12s\n' "GENIO HACKER RED HAWK @OOGENIOHACKER" ; tput sgr0
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%55s%s%-12s\n' "EL CONOCIMIENTO ES LIBRE @MSCPERU" ; tput sgr0
 echo -e "\033[01;31m▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣\033[0m"
 echo -e "\033[1;32mSISTEMA              |  MEMÓRIA RAM          |  PROCESSADOR "
 echo -e "\033[1;31mOS: \033[1;37m$_system   | \033[1;31mTOTAL:\033[1;37m$_ram      | \033[1;31mNUCLEO: \033[1;37m$_core\033[0m"
@@ -262,7 +262,7 @@ echo -e "\033[1;34m[\033[1;37m30 •\033[1;34m]\033[1;37m ➩ \033[1;33mATUALIZA
 echo -e "\033[1;34m[\033[1;37m31 •\033[1;34m]\033[1;37m ➩ \033[1;33mREMOVER SCRIPT \033[0;32m"
 echo -e "\033[01;34m▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣"
 echo -e "\033[1;34m[\033[1;37mR •\033[1;34m]\033[1;37m ➩ \033[1;33mMENU 1 | \033[1;34m[\033[1;37m0 •\033[1;34m]\033[1;37m ➩ \033[1;33mSAIR \033[0;32m"
-echo -ne "\033[1;32MESCOLHA A OPÇÃO DESEJADA\033[1;33m\033[1;31m\033[1;37m : "; read x
+echo -ne "\033[1;32ELIJA LA OPCION\033[1;33m\033[1;31m\033[1;37m : "; read x
 case "$x" in
    16)
    clear
@@ -404,7 +404,7 @@ stsom=$(ps x | grep "shutdown -r 16:00"|grep -v grep > /dev/null && echo -e "\03
 autm=$(grep "menu;" /etc/profile > /dev/null && echo -e "\033[1;32m(ON ◉) " || echo -e "\033[1;31m(OFF ○)")
 clear
 echo -e "\033[01;31m▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣\033[0m"
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%55s%s%-12s\n' "GENIO HACKER RED HAWK @OOGENIOHACKER" ; tput sgr0
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%55s%s%-12s\n' "EL CONOCIMIENTO ES LIBRE @MSCPERU" ; tput sgr0
 echo -e "\033[01;31m▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣\033[0m"
 echo -e "\033[1;32mSISTEMA              |  MEMÓRIA RAM          |  PROCESSADOR "
 echo -e "\033[1;31mOS: \033[1;37m$_system   | \033[1;31mTOTAL:\033[1;37m$_ram      | \033[1;31mNUCLEO: \033[1;37m$_core\033[0m"
@@ -435,7 +435,7 @@ echo -e "\033[1;34m[\033[1;37m14 •\033[1;34m]\033[1;37m ➩ \033[1;33mOTIMIZAR
 echo -e "\033[1;34m[\033[1;37m15 •\033[1;34m]\033[1;37m ➩ \033[1;33mBACKUP SSH \033[0;32m"
 echo -e "\033[01;31m▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣\033[0m"
 echo -e "\033[1;34m[\033[1;37mP •\033[1;34m]\033[1;37m ➩ \033[1;33mMENU 2 | \033[1;34m[\033[1;37m0 •\033[1;34m]\033[1;37m ➩ \033[1;33mSAIR \033[0;32m"
-echo -ne "\033[1;32mESCOLHA OPÇÃO DESEJADA\033[1;33m\033[1;31m\033[1;37m : "; read x
+echo -ne "\033[1;32mESCOJA LA OPCION\033[1;33m\033[1;31m\033[1;37m : "; read x
 
 case "$x" in 
    1 | 01)
