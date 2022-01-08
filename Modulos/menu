@@ -270,7 +270,7 @@ case "$x" in
    ;;
    18)
    clear
-   limiter
+   limit_ssh
    ;;
    19)
    clear
