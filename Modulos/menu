@@ -555,11 +555,8 @@ case "$x" in
    ;;
    g) 
    clear
-
    reiniciarservicos
-
    sleep 3
-
    ;;
    h) 
    echo ""
