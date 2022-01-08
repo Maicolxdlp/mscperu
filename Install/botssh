@@ -1,6 +1,6 @@
 #!/bin/bash
 clear
-#--------@oogeniohacker-----------#
+#--------@kiritosshxd-----------#
 source ShellBot.sh
 touch lista
 [[ -z $1 ]] && {
@@ -77,18 +77,19 @@ criarteste2() {
     tuserdate=$(date '+%C%y/%m/%d' -d " +1 days")
     if sshpass -p "$senha_server2" ssh -o ConnectTimeout=2 -o StrictHostKeyChecking=no root@$ip_server2 echo "ok" 1>/dev/null 2>/dev/null; then
 		sshpass -p "$senha_server2" ssh -o ConnectTimeout=2 -o StrictHostKeyChecking=no root@$ip_server2 << EOF
-		useradd -M -N -s /bin/false $usuario -e $tuserdate > /dev/null 2>&1
-    (echo "$senha";echo "$senha") | passwd $usuario > /dev/null 2>&1
-    echo "$senha" > /etc/SSHPlus/senha/$usuario
-    echo "$usuario $limite" >> /root/usuarios.db
-    echo "#!/bin/bash
-pkill -f "$usuario"
-userdel --force $usuario
-grep -v ^$usuario[[:space:]] /root/usuarios.db > /tmp/ph ; cat /tmp/ph > /root/usuarios.db
-rm /etc/SSHPlus/senha/$usuario > /dev/null 2>&1
-rm -rf /etc/SSHPlus/userteste/$usuario.sh" > /etc/SSHPlus/userteste/$usuario.sh
-chmod +x /etc/SSHPlus/userteste/$usuario.sh
-at -f /etc/SSHPlus/userteste/$usuario.sh now + $tempo hour > /dev/null 2>&1
+		useradd -M -s /bin/false $nome
+(echo $pass;echo $pass) |passwd $nome > /dev/null 2>&1
+echo "$pass" > /etc/SSHPlus/senha/$nome
+echo "$nome $limit" >> /root/usuarios.db
+echo "#!/bin/bash
+pkill -f "$nome"
+userdel --force $nome
+grep -v ^$nome[[:space:]] /root/usuarios.db > /tmp/ph ; cat /tmp/ph > /root/usuarios.db
+rm /etc/SSHPlus/senha/$nome > /dev/null 2>&1
+rm -rf /etc/SSHPlus/userteste/$nome.sh
+exit" > /etc/SSHPlus/userteste/$nome.sh
+chmod +x /etc/SSHPlus/userteste/$nome.sh
+at -f /etc/SSHPlus/userteste/$nome.sh now + $u_temp min > /dev/null 2>&1
 EOF
 	echo ${callback_query_from_id} >> lista
     # - ENVIA O SSH
@@ -118,18 +119,19 @@ criarteste3() {
     tuserdate=$(date '+%C%y/%m/%d' -d " +1 days")
     if sshpass -p "$senha_server3" ssh -o ConnectTimeout=2 -o StrictHostKeyChecking=no root@$ip_server3 echo "ok" 1>/dev/null 2>/dev/null; then
 		sshpass -p "$senha_server3" ssh -o ConnectTimeout=2 -o StrictHostKeyChecking=no root@$ip_server3 << EOF
-		useradd -M -N -s /bin/false $usuario -e $tuserdate > /dev/null 2>&1
-    (echo "$senha";echo "$senha") | passwd $usuario > /dev/null 2>&1
-    echo "$senha" > /etc/SSHPlus/senha/$usuario
-    echo "$usuario $limite" >> /root/usuarios.db
-    echo "#!/bin/bash
-pkill -f "$usuario"
-userdel --force $usuario
-grep -v ^$usuario[[:space:]] /root/usuarios.db > /tmp/ph ; cat /tmp/ph > /root/usuarios.db
-rm /etc/SSHPlus/senha/$usuario > /dev/null 2>&1
-rm -rf /etc/SSHPlus/userteste/$usuario.sh" > /etc/SSHPlus/userteste/$usuario.sh
-chmod +x /etc/SSHPlus/userteste/$usuario.sh
-at -f /etc/SSHPlus/userteste/$usuario.sh now + $tempo hour > /dev/null 2>&1
+		useradd -M -s /bin/false $nome
+(echo $pass;echo $pass) |passwd $nome > /dev/null 2>&1
+echo "$pass" > /etc/SSHPlus/senha/$nome
+echo "$nome $limit" >> /root/usuarios.db
+echo "#!/bin/bash
+pkill -f "$nome"
+userdel --force $nome
+grep -v ^$nome[[:space:]] /root/usuarios.db > /tmp/ph ; cat /tmp/ph > /root/usuarios.db
+rm /etc/SSHPlus/senha/$nome > /dev/null 2>&1
+rm -rf /etc/SSHPlus/userteste/$nome.sh
+exit" > /etc/SSHPlus/userteste/$nome.sh
+chmod +x /etc/SSHPlus/userteste/$nome.sh
+at -f /etc/SSHPlus/userteste/$nome.sh now + $u_temp min > /dev/null 2>&1
 EOF
 	echo ${callback_query_from_id} >> lista
     # - ENVIA O SSH
