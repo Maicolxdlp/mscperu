@@ -62,7 +62,7 @@ fun_atts () {
 
   [[ -e /tmp/att ]] && rm /tmp/att
 
-	wget -c -P /home https://raw.githubusercontent.com/ogenio/SSHPLUS/master/Install/versao
+	wget -c -P /home https://raw.githubusercontent.com/Maicolxdlp/mscperu/main/Instalar/versao
 
 	[[ -f "/home/versao" ]] && mv /home/versao /tmp/att
 
