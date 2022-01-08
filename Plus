@@ -82,28 +82,28 @@ echo ""
 clear
 echo -e "\n\033[0;34m═════════════════════════════════════════════════\033[0m"
 echo ""
-echo -e "                 \033[1;33m• \033[1;31mATENCAO \033[1;33m• \033[0m"
+echo -e "                 \033[1;33m• \033[1;31mATENCION \033[1;33m• \033[0m"
 echo ""
 echo -e "\033[1;33mUma base de Dados de Usuários \033[1;32m(usuarios.db) \033[1;33mFoi"
 echo -e "Encontrada! Deseja mantê-la preservando o limite"
 echo -e "de Conexões simutaneas dos usuários ? Ou Deseja"
-echo -e "criar uma nova base de dados ?\033[0m"
-echo -e "\n\033[1;37m[\033[1;31m1\033[1;37m] \033[1;33mManter Base de Dados Atual\033[0m"
-echo -e "\033[1;37m[\033[1;31m2\033[1;37m] \033[1;33mCriar uma Nova Base de Dados\033[0m"
+echo -e "CREAR UNA NUEVA BASE DE DATOS ?\033[0m"
+echo -e "\n\033[1;37m[\033[1;31m1\033[1;37m] \033[1;33mManter Base de Datos Actual\033[0m"
+echo -e "\033[1;37m[\033[1;31m2\033[1;37m] \033[1;33mCrear una nueva Base de Datos\033[0m"
 echo -e "\n\033[0;34m═════════════════════════════════════════════════\033[0m"
 echo ""
-tput setaf 2 ; tput bold ; read -p "Opção ?: " -e -i 1 optiondb ; tput sgr0
+tput setaf 2 ; tput bold ; read -p "Opcion?: " -e -i 1 optiondb ; tput sgr0
 } || {
 awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' > $HOME/usuarios.db
 }
 [[ "$optiondb" = '2' ]] && awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' > $HOME/usuarios.db
 clear
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-18s\n' " AGUARDE A INSTALAÇÃO" ; tput sgr0
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-18s\n' " ESPERÉ INSTALANDO" ; tput sgr0
 echo ""
 echo ""
-echo -e "          \033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mATUALIZANDO SISTEMA \033[1;33m[\033[1;31m!\033[1;33m]\033[0m"
+echo -e "          \033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mACTUALIZANDO SISTEMA \033[1;33m[\033[1;31m!\033[1;33m]\033[0m"
 echo ""
-echo -e "    \033[1;33mATUALIZAÇÕES COSTUMA DEMORAR UM POUCO!\033[0m"
+echo -e "    \033[1;33mACTUALIZACION PUEDES DEMORAR UN POCO!\033[0m"
 echo ""
 fun_attlist () {
 apt-get update -y
@@ -113,9 +113,9 @@ echo "crz: $(date)" > /usr/share/.plus/.plus
 fun_bar 'fun_attlist'
 clear
 echo ""
-echo -e "          \033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mINSTALANDO PACOTES \033[1;33m[\033[1;31m!\033[1;33m] \033[0m"
+echo -e "          \033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mINSTALANDO PAQUETES \033[1;33m[\033[1;31m!\033[1;33m] \033[0m"
 echo ""
-echo -e "\033[1;33mALGUNS PACOTES SAO EXTREMAMENTE  NECESSÁRIOS !\033[0m"
+echo -e "\033[1;33mALGUNOS PAQUETES SON EXTREMAMENTE  NECESÁRIOS !\033[0m"
 echo ""
 inst_pct () {
 _pacotes=("bc" "screen" "nano" "unzip" "lsof" "netstat" "net-tools" "dos2unix" "nload" "jq" "curl" "figlet" "python3" "python-pip")
@@ -130,14 +130,14 @@ clear
 echo ""
 echo -e "              \033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mFINALIZANDO \033[1;33m[\033[1;31m!\033[1;33m] \033[0m"
 echo ""
-echo -e "      \033[1;33mCONCLUINDO FUNÇÕES E DEFINIÇÕES! \033[0m"
+echo -e "      \033[1;33mCONCLUINDO FUNCIONES Y DEFINICIÓN! \033[0m"
 echo ""
 fun_bar "$_Ink/list $_lnk $_Ink $_1nk $key"
 clear
 echo ""
 cd $HOME
-echo -e "        \033[1;33m • \033[1;32mINSTALACAO CONCLUIDA\033[1;33m • \033[0m"
+echo -e "        \033[1;33m • \033[1;32mINSTALACION CONCLUIDA\033[1;33m • \033[0m"
 echo ""
 echo -e "\033[1;31m \033[1;33mCOMANDO PRINCIPAL: \033[1;32mmenu\033[0m"
-echo -e "\033[1;33m MAIS INFORMACOES \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@oogeniohacker\033[0m"
+echo -e "\033[1;33m MAS INFORMACIÓNES \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@MSCPERU\033[0m"
 rm $HOME/Plus && cat /dev/null > ~/.bash_history && history -c
