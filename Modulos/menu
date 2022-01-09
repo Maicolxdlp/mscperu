@@ -252,7 +252,7 @@ echo -e "\033[1;34m[\033[1;37m20 •\033[1;34m]\033[1;37m ➩ \033[1;33mAUTO MEN
 echo -e "\033[1;34m[\033[1;37m21 •\033[1;34m]\033[1;37m ➩ \033[1;33mBOT TELEGRAM $stsbot \033[0;32m"
 echo -e "\033[1;34m[\033[1;37m22 •\033[1;34m]\033[1;37m ➩ \033[1;33mBOT TESTE $stsbotteste \033[0;32m"
 echo -e "\033[1;34m[\033[1;37m23 •\033[1;34m]\033[1;37m ➩ \033[1;33mBLOQUER SITIO\033[1;37m \033[0;32m"
-echo -e "\033[1;34m[\033[1;37m24 •\033[1;34m]\033[1;37m ➩ \033[1;33mAUTO REBOOT (00:00H) \033[0;32m"
+echo -e "\033[1;34m[\033[1;37m24 •\033[1;34m]\033[1;37m ➩ \033[1;33mTUNNIG DNS(VELOCIDAD) \033[0;32m"
 echo -e "\033[1;34m[\033[1;37m25 •\033[1;34m]\033[1;37m ➩ \033[1;33mHTOP MONITOR \033[0;32m"
 echo -e "\033[1;34m[\033[1;37m26 •\033[1;34m]\033[1;37m ➩ \033[1;33mREINICIAR SISTEMA \033[0;32m"
 echo -e "\033[1;34m[\033[1;37m27 •\033[1;34m]\033[1;37m ➩ \033[1;33mREINICIAR SERVICIOS \033[0;32m"
@@ -282,15 +282,16 @@ case "$x" in
    ;;
    24)
    clear
-  echo -e "\033[1;33mPARA SAIR CLICK CTRL + C\033[1;36m"
-   sleep 3s
-   htop
+   tuning
    clear
    menu2
    ;;
    25)
    clear
-   echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar al \033[1;32mMENU!\033[0m"; read
+   echo -e "\033[1;33mPARA SAIR CLICK CTRL + C\033[1;36m"
+   sleep 3s
+   htop
+   clear
    menu2
    ;;
    28)
