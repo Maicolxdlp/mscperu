@@ -103,6 +103,26 @@ pip install glances > /dev/null 2>&1
 #'+++++++++++++++++++++++++++++++++++++++++++'#
 # MSCHTTP SERVER +++++ MSCHTTP SERVER +++++++'
 #'+++++++++++++++++++++++++++++++++++++++++++'
+### "HERRAMIENTAS" ###
+echo ""
+echo -e "\033[1;33mINSTALANDO HERRAMIENTAS \033[1;32m ( TUNING + SWAP MEMORY ETC ) "
+sleep 3s
+cd /bin/ && rm -f blocksite*
+cd /bin/ && rm -f blockt*
+cd /bin/ && rm -f swapmemory*
+cd /bin/ && rm -f tuning*
+cd /bin/ && rm -f atualizar*
+cd /bin/ && wget https://raw.githubusercontent.com/ACKHTTP/ACKHTTP-SERVER-MANAGER/main/SCRIPT%20ACKHTTP%20SERVER/SCRIPT%20ACKHTTP%20SERVER/FERRAMENTAS/blocksite > /dev/null 2>&1
+cd /bin/ && wget https://raw.githubusercontent.com/ACKHTTP/ACKHTTP-SERVER-MANAGER/main/SCRIPT%20ACKHTTP%20SERVER/SCRIPT%20ACKHTTP%20SERVER/FERRAMENTAS/blockt > /dev/null 2>&1
+cd /bin/ && wget https://raw.githubusercontent.com/ACKHTTP/ACKHTTP-SERVER-MANAGER/main/SCRIPT%20ACKHTTP%20SERVER/SCRIPT%20ACKHTTP%20SERVER/FERRAMENTAS/swapmemory > /dev/null 2>&1
+cd /bin/ && wget https://raw.githubusercontent.com/ACKHTTP/ACKHTTP-SERVER-MANAGER/main/SCRIPT%20ACKHTTP%20SERVER/SCRIPT%20ACKHTTP%20SERVER/FERRAMENTAS/tuning > /dev/null 2>&1
+cd /bin/ && wget https://raw.githubusercontent.com/ACKHTTP/ACKHTTP-SERVER-MANAGER/main/SCRIPT%20ACKHTTP%20SERVER/SCRIPT%20ACKHTTP%20SERVER/FERRAMENTAS/atualizar > /dev/null 2>&1
+cd /bin/ && chmod +x blocksite
+cd /bin/ && chmod +x blockt
+cd /bin/ && chmod +x swapmemory
+cd /bin/ && chmod +x tuning
+cd /bin/ && chmod +x atualizar
+#'+++++++++++++++++++++++++++++++++++++++++++'#
 #-----------------------------------------------------------------------------------------------------------------
 echo -e "\n\033[1;32mEL CONOCIMIENTO ES LIBRE!\033[1;32m"
 sleep 1s
