@@ -253,10 +253,10 @@ echo -e "\033[1;34m[\033[1;37m21 •\033[1;34m]\033[1;37m ➩ \033[1;33mBOT TELE
 echo -e "\033[1;34m[\033[1;37m22 •\033[1;34m]\033[1;37m ➩ \033[1;33mBOT TESTE $stsbotteste \033[0;32m"
 echo -e "\033[1;34m[\033[1;37m23 •\033[1;34m]\033[1;37m ➩ \033[1;33mBLOQUER SITIO\033[1;37m \033[0;32m"
 echo -e "\033[1;34m[\033[1;37m24 •\033[1;34m]\033[1;37m ➩ \033[1;33mAUTO REBOOT (00:00H) \033[0;32m"
-echo -e "\033[1;34m[\033[1;37m25 •\033[1;34m]\033[1;37m ➩ \033[1;33mSISTEMA AVANZADO \033[0;32m"
+echo -e "\033[1;34m[\033[1;37m25 •\033[1;34m]\033[1;37m ➩ \033[1;33mHTOP MONITOR \033[0;32m"
 echo -e "\033[1;34m[\033[1;37m26 •\033[1;34m]\033[1;37m ➩ \033[1;33mREINICIAR SISTEMA \033[0;32m"
 echo -e "\033[1;34m[\033[1;37m27 •\033[1;34m]\033[1;37m ➩ \033[1;33mREINICIAR SERVICIOS \033[0;32m"
-echo -e "\033[1;34m[\033[1;37m28 •\033[1;34m]\033[1;37m ➩ \033[1;33mMAS OPCIÓN (DSTV) \033[1;32m\033[0;32m"
+echo -e "\033[1;34m[\033[1;37m28 •\033[1;34m]\033[1;37m ➩ \033[1;33mMONITOR PROCESOS \033[1;32m\033[0;32m"
 echo -e "\033[1;34m[\033[1;37m29 •\033[1;34m]\033[1;37m ➩ \033[1;33mPROCESOS DE VPS \033[0;32m"
 echo -e "\033[1;34m[\033[1;37m30 •\033[1;34m]\033[1;37m ➩ \033[1;33mATUALIZAR SCRIPT \033[1;37m"
 echo -e "\033[1;34m[\033[1;37m31 •\033[1;34m]\033[1;37m ➩ \033[1;33mREMOVER SCRIPT \033[0;32m"
@@ -282,9 +282,11 @@ case "$x" in
    ;;
    24)
    clear
-   echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar al \033[1;32mMENU!\033[0m"; read
-   ;;
-   1)
+  echo -e "\033[1;33mPARA SAIR CLICK CTRL + C\033[1;36m"
+   sleep 3s
+   htop
+   clear
+   menu2
    ;;
    25)
    clear
@@ -292,8 +294,10 @@ case "$x" in
    menu2
    ;;
    28)
-  clear
-   echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar al \033[1;32mMENU!\033[0m"; read
+   echo -e "\033[1;33mPARA SAIR CLICK CTRL + C\033[1;36m"
+   sleep 5s
+   glances
+   clear
    menu2
    ;;
    26)
