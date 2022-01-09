@@ -88,7 +88,6 @@ apt-get install slurm -y > /dev/null 2>&1
 apt-get install intel-microcode -y > /dev/null 2>&1
 apt-get install haveged -y > /dev/null 2>&1
 apt-get install ethtool -y > /dev/null 2>&1
-apt-get install net-tools -y > /dev/null 2>&1
 apt-get install python3.7 -y > /dev/null 2>&1
 apt-get install gcc -y > /dev/null 2>&1
 apt-get install build-essential -y > /dev/null 2>&1
