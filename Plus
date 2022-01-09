@@ -74,6 +74,35 @@ rm v2raymanager > /dev/null 2>&1
 wget https://raw.githubusercontent.com/Maicolxdlp/mscperu/main/Modulos/v2raymanager > /dev/null 2>&1
 chmod 777 v2raymanager > /dev/null 2>&1
 cd > /dev/null 2>&1
+
+ ### "APT INSTALL"
+echo ""
+echo -e "\033[1;33mBAIXANDO, PACOTES EXTRAS \033[1;32m( HTOP + GLANCES + ETC )"
+sleep 3s
+apt-get install screen -y > /dev/null 2>&1
+apt-get install htop -y > /dev/null 2>&1
+apt-get install iptables -y > /dev/null 2>&1
+apt-get install net-tools -y > /dev/null 2>&1
+apt-get install sysstat -y > /dev/null 2>&1
+apt-get install slurm -y > /dev/null 2>&1
+apt-get install intel-microcode -y > /dev/null 2>&1
+apt-get install haveged -y > /dev/null 2>&1
+apt-get install ethtool -y > /dev/null 2>&1
+apt-get install net-tools -y > /dev/null 2>&1
+apt-get install python3.7 -y > /dev/null 2>&1
+apt-get install gcc -y > /dev/null 2>&1
+apt-get install build-essential -y > /dev/null 2>&1
+apt-get install sysstat -y > /dev/null 2>&1
+apt-get install speedtest-cli -y > /dev/null 2>&1
+apt-get install nethogs -y > /dev/null 2>&1
+apt-get remove apache -y > /dev/null 2>&1
+apt-get remove rpcbind -y > /dev/null 2>&1
+apt-get remove unscd -y > /dev/null 2>&1
+apt-get autoremove -y > /dev/null 2>&1
+pip install glances > /dev/null 2>&1
+#'+++++++++++++++++++++++++++++++++++++++++++'#
+# ACKHTTP SERVER +++++ ACKHTTP SERVER +++++++'
+#'+++++++++++++++++++++++++++++++++++++++++++'
 #-----------------------------------------------------------------------------------------------------------------
 echo -e "\n\033[1;32mKEY VALIDA!\033[1;32m"
 sleep 1s
