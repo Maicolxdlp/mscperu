@@ -55,25 +55,25 @@ echo -e "\033[1;31m[\033[1;36m10\033[1;31m]\033[1;33m SINCOLOR"
 echo ""
 echo -ne "\033[1;32mQUE COLOR\033[1;31m ?\033[1;37m : "; read ban_cor
 if [[ "$ban_cor" = "1" ]] || [[ "$ban_cor" = "01" ]]; then
-echo "<h$_size style='text-align:center'><font color='blue' style='text-align:center'>$msg1" >> $local
+echo "<h$_size style='text-align:center'><font color='blue' FACE='times new roman'>$msg1" >> $local
 elif [[ "$ban_cor" = "2" ]] || [[ "$ban_cor" = "02" ]]; then
-echo "<h$_size style='text-align:center'><font color='green' style='text-align:center'>$msg1" >> $local
+echo "<h$_size style='text-align:center'><font color='green' FACE='times new roman'>$msg1" >> $local
 elif [[ "$ban_cor" = "3" ]] || [[ "$ban_cor" = "03" ]]; then
-echo "<h$_size style='text-align:center'><font color='red' style='text-align:center'>$msg1" >> $local
+echo "<h$_size style='text-align:center'><font color='red' FACE='times new roman'>$msg1" >> $local
 elif [[ "$ban_cor" = "4" ]] || [[ "$ban_cor" = "04" ]]; then
-echo "<h$_size style='text-align:center'><font color='yellow' style='text-align:center'>$msg1" >> $local
+echo "<h$_size style='text-align:center'><font color='yellow' FACE='times new roman'>$msg1" >> $local
 elif [[ "$ban_cor" = "5" ]] || [[ "$ban_cor" = "05" ]]; then
-echo "<h$_size style='text-align:center'><font color=#F535AA' style='text-align:center'>$msg1" >> $local
+echo "<h$_size style='text-align:center'><font color='#F535AA' FACE='times new roman'>$msg1" >> $local
 elif [[ "$ban_cor" = "6" ]] || [[ "$ban_cor" = "06" ]]; then
-echo "<h$_size style='text-align:center'><font color='cyan' style='text-align:center'>$msg1" >> $local
+echo "<h$_size style='text-align:center'><font color='cyan' FACE='times new roman'>$msg1" >> $local
 elif [[ "$ban_cor" = "7" ]] || [[ "$ban_cor" = "07" ]]; then
-echo "<h$_size style='text-align:center'><font color='#FF7F00' style='text-align:center'>$msg1" >> $local
+echo "<h$_size style='text-align:center'><font color='#FF7F00' FACE='times new roman'>$msg1" >> $local
 elif [[ "$ban_cor" = "8" ]] || [[ "$ban_cor" = "08" ]]; then
-echo "<h$_size style='text-align:center'><font color='#9932CD' style='text-align:center'>$msg1" >> $local
+echo "<h$_size style='text-align:center'><font color='#9932CD' FACE='times new roman'>$msg1" >> $local
 elif [[ "$ban_cor" = "9" ]] || [[ "$ban_cor" = "09" ]]; then
-echo "<h$_size style='text-align:center'><font color='black' style='text-align:center'>$msg1" >> $local
+echo "<h$_size style='text-align:center'><font color='black' FACE='times new roman'>$msg1" >> $local
 elif [[ "$ban_cor" = "10" ]]; then
-echo "<h$_size>$msg1</h$_size>" >> $local
+echo "<h$_size>$msg1" >> $local
 /etc/init.d/ssh restart > /dev/null 2>&1
 echo -e "\n\033[1;32mBANNER DEFINIDO !\033[0m"
 sleep 2
