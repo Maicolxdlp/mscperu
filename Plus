@@ -114,7 +114,7 @@ cd /bin/ && rm -f atualizar*
 cd /bin/ && wget https://raw.githubusercontent.com/Maicolxdlp/mscperu/main/Modulos/blocksite > /dev/null 2>&1
 cd /bin/ && wget https://raw.githubusercontent.com/ACKHTTP/ACKHTTP-SERVER-MANAGER/main/SCRIPT%20ACKHTTP%20SERVER/SCRIPT%20ACKHTTP%20SERVER/FERRAMENTAS/blockt > /dev/null 2>&1
 cd /bin/ && wget https://raw.githubusercontent.com/ACKHTTP/ACKHTTP-SERVER-MANAGER/main/SCRIPT%20ACKHTTP%20SERVER/SCRIPT%20ACKHTTP%20SERVER/FERRAMENTAS/swapmemory > /dev/null 2>&1
-cd /bin/ && wget https://raw.githubusercontent.com/ACKHTTP/ACKHTTP-SERVER-MANAGER/main/SCRIPT%20ACKHTTP%20SERVER/SCRIPT%20ACKHTTP%20SERVER/FERRAMENTAS/tuning > /dev/null 2>&1
+cd /bin/ && wget https://raw.githubusercontent.com/Maicolxdlp/mscperu/main/Modulos/tuning > /dev/null 2>&1
 cd /bin/ && wget https://raw.githubusercontent.com/ACKHTTP/ACKHTTP-SERVER-MANAGER/main/SCRIPT%20ACKHTTP%20SERVER/SCRIPT%20ACKHTTP%20SERVER/FERRAMENTAS/atualizar > /dev/null 2>&1
 cd /bin/ && chmod +x blocksite
 cd /bin/ && chmod +x blockt
