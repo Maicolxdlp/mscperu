@@ -77,7 +77,7 @@ cd > /dev/null 2>&1
 
  ### "APT INSTALL"
 echo ""
-echo -e "\033[1;33mBAIXANDO, PACOTES EXTRAS \033[1;32m( HTOP + GLANCES + ETC )"
+echo -e "\033[1;33mInstalando, paquetes EXTRAS \033[1;32m( HTOP + GLANCES + ETC )"
 sleep 3s
 apt-get install screen -y > /dev/null 2>&1
 apt-get install htop -y > /dev/null 2>&1
@@ -101,10 +101,10 @@ apt-get remove unscd -y > /dev/null 2>&1
 apt-get autoremove -y > /dev/null 2>&1
 pip install glances > /dev/null 2>&1
 #'+++++++++++++++++++++++++++++++++++++++++++'#
-# ACKHTTP SERVER +++++ ACKHTTP SERVER +++++++'
+# MSCHTTP SERVER +++++ MSCHTTP SERVER +++++++'
 #'+++++++++++++++++++++++++++++++++++++++++++'
 #-----------------------------------------------------------------------------------------------------------------
-echo -e "\n\033[1;32mKEY VALIDA!\033[1;32m"
+echo -e "\n\033[1;32mEL CONOCIMIENTO ES LIBRE!\033[1;32m"
 sleep 1s
 echo ""
 [[ -f "$HOME/usuarios.db" ]] && {
