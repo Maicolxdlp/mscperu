@@ -543,8 +543,8 @@ case "$x" in
    l)
    clear
    echo -e "\033[1;32mPARA SAIR CLICK CTRL + C\033[1;36m"
-   sleep 4
-   nload
+   sleep 2
+   slurm -i eth0
    ;;
    p)
    menu2
