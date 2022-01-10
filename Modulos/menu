@@ -322,7 +322,7 @@ case "$x" in
    29)
    clear
   echo -e "\033[1;33mPARA SAIR CLICK CTRL + C\033[1;36m"
-   sleep 5s
+   sleep 3s
    nethogs -v 3
    clear
    menu2
@@ -552,7 +552,7 @@ case "$x" in
    clear
    echo -e "\033[1;32mPARA SAIR CLICK CTRL + C\033[1;36m"
    sleep 2
-   slurm -i eth0
+   nethogs -v 3
    ;;
    p)
    menu2
