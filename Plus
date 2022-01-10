@@ -110,17 +110,14 @@ cd /bin/ && rm -f blocksite*
 cd /bin/ && rm -f blockt*
 cd /bin/ && rm -f swapmemory*
 cd /bin/ && rm -f tuning*
-cd /bin/ && rm -f atualizar*
 cd /bin/ && wget https://raw.githubusercontent.com/Maicolxdlp/mscperu/main/Modulos/blocksite > /dev/null 2>&1
 cd /bin/ && wget https://raw.githubusercontent.com/ACKHTTP/ACKHTTP-SERVER-MANAGER/main/SCRIPT%20ACKHTTP%20SERVER/SCRIPT%20ACKHTTP%20SERVER/FERRAMENTAS/blockt > /dev/null 2>&1
 cd /bin/ && wget https://raw.githubusercontent.com/ACKHTTP/ACKHTTP-SERVER-MANAGER/main/SCRIPT%20ACKHTTP%20SERVER/SCRIPT%20ACKHTTP%20SERVER/FERRAMENTAS/swapmemory > /dev/null 2>&1
 cd /bin/ && wget https://raw.githubusercontent.com/Maicolxdlp/mscperu/main/Modulos/tuning > /dev/null 2>&1
-cd /bin/ && wget https://raw.githubusercontent.com/ACKHTTP/ACKHTTP-SERVER-MANAGER/main/SCRIPT%20ACKHTTP%20SERVER/SCRIPT%20ACKHTTP%20SERVER/FERRAMENTAS/atualizar > /dev/null 2>&1
 cd /bin/ && chmod +x blocksite
 cd /bin/ && chmod +x blockt
 cd /bin/ && chmod +x swapmemory
 cd /bin/ && chmod +x tuning
-cd /bin/ && chmod +x atualizar
 #'+++++++++++++++++++++++++++++++++++++++++++'#
 #-----------------------------------------------------------------------------------------------------------------
 echo -e "\n\033[1;32mEL CONOCIMIENTO ES LIBRE!\033[1;32m"
@@ -132,9 +129,9 @@ echo -e "\n\033[0;34m═══════════════════�
 echo ""
 echo -e "                 \033[1;33m• \033[1;31mATENCION \033[1;33m• \033[0m"
 echo ""
-echo -e "\033[1;33mUma base de Dados de Usuários \033[1;32m(usuarios.db) \033[1;33mFoi"
-echo -e "Encontrada! Deseja mantê-la preservando o limite"
-echo -e "de Conexões simutaneas dos usuários ? Ou Deseja"
+echo -e "\033[1;33mUna base de Dados de Usuários \033[1;32m(usuarios.db) \033[1;33mFoi"
+echo -e "Encontrada! Deseja mantener-la preservando o limite"
+echo -e "de Conexión simultáneas de usuários ? O Desea"
 echo -e "CREAR UNA NUEVA BASE DE DATOS ?\033[0m"
 echo -e "\n\033[1;37m[\033[1;31m1\033[1;37m] \033[1;33mManter Base de Datos Actual\033[0m"
 echo -e "\033[1;37m[\033[1;31m2\033[1;37m] \033[1;33mCrear una nueva Base de Datos\033[0m"
@@ -166,7 +163,7 @@ echo ""
 echo -e "\033[1;33mALGUNOS PAQUETES SON EXTREMAMENTE  NECESÁRIOS !\033[0m"
 echo ""
 inst_pct () {
-_pacotes=("bc" "screen" "nano" "unzip" "htop" "iptables" "sysstat" "slurm" "ethtool" "nethogs" "lsof" "netstat" "net-tools" "dos2unix" "nload" "jq" "curl" "figlet" "python3" "python-pip")
+_pacotes=("bc" "screen" "nano" "unzip" "iptables" "sysstat" "lsof" "netstat" "dos2unix" "nload" "jq" "curl" "figlet" "python3" "python-pip")
 for _prog in ${_pacotes[@]}; do
 apt install $_prog -y
 done
