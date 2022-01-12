@@ -23,7 +23,7 @@ menu() {
         msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
         msg+="<b>•••••• HOLA BIENVENIDO •••••</b>\n"
         msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
-        msg+="USUARIO DE PRUEBA !"
+        msg+="USUARIO DE PRUEBA!"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
         --text "$(echo -e $msg)" \
         --reply_markup "$keyboard1" \
@@ -33,9 +33,10 @@ menu() {
 
 # - funcao criar ssh
 criarteste() {
+  
     usuario=$(echo MSC$(( RANDOM% + 250 )))
     senha='12345'
-    limite='3'
+    limite='2'
     tempo='1'
     tuserdate=$(date '+%C%y/%m/%d' -d " +2 days")
     useradd -M -N -s /bin/false $usuario -e $tuserdate > /dev/null 2>&1
@@ -150,9 +151,9 @@ infouser () {
 
 unset botao1
 botao1=''
-ShellBot.InlineKeyboardButton --button 'botao1' --line 1 --text 'GENERAR CUENTA GRATIS' --callback_data 'gerarssh'
+ShellBot.InlineKeyboardButton --button 'botao1' --line 1 --text 'USUARIO DE PRUEBA' --callback_data 'gerarssh'
 #ShellBot.InlineKeyboardButton --button 'botao1' --line 2 --text '🇨🇦 GERAR SSH CA 01 🇨🇦' --callback_data 'gerarssh2'
-ShellBot.InlineKeyboardButton --button 'botao1' --line 2 --text 'DESCARGAR MI APP' --callback_data '2' --url 'http://web.mscperu.online'
+ShellBot.InlineKeyboardButton --button 'botao1' --line 2 --text 'DESCARGAR MI APP' --callback_data '2' --url 'https://web.mscperu.online'
 ShellBot.InlineKeyboardButton --button 'botao1' --line 3 --text 'TELEGRAM' --callback_data '3' --url 'https://t.me/MSCPERU'
 #ShellBot.InlineKeyboardButton --button 'botao1' --line 4 --text '⬇️ OUTROS APPS ⬇️' --callback_data '5' --url 'https://tnetssh.xyz/downloads'
 ShellBot.regHandleFunction --function criarteste --callback_data gerarssh
