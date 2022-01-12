@@ -61,11 +61,6 @@ rm -rf /etc/SSHPlus/userteste/$usuario.sh" > /etc/SSHPlus/userteste/$usuario.sh
 
 # - funcao criar ssh 2
 criarteste2() {
-   [[ $(grep -wc ${callback_query_from_id} lista) != '0' ]] && {
-      ShellBot.sendMessage --chat_id ${callback_query_message_chat_id} \
-        --text "VOCÊ JA CRIOU SUA CONTA SSH HOJE !"
-      return 0
-    }
     usuario=$(echo VIP$(( RANDOM% + 250 )))
     senha='1234'
     limite='2'
