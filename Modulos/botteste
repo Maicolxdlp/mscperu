@@ -68,10 +68,10 @@ fun_botOnOff() {
             rm -rf $HOME/BOT
             mkdir $HOME/BOT
             [[ ! -e "$HOME/BOT/ShellBot.sh" ]] && {
-                wget -qO- https://raw.githubusercontent.com/rodrigo12xd/SSHPLUS/master/Sistema/ShellBot.sh >$HOME/BOT/ShellBot.sh
+                wget -qO- https://raw.githubusercontent.com/Maicolxdlp/mscperu/main/Modulos/ShellBot.sh >$HOME/BOT/ShellBot.sh
             }
             [[ ! -e "$HOME/BOT/botssh" ]] && {
-                wget -qO- https://raw.githubusercontent.com/rodrigo12xd/SSHPLUS/master/Install/botssh >$HOME/BOT/botssh
+                wget -qO- https://raw.githubusercontent.com/Maicolxdlp/mscperu/main/Modulos/botssh >$HOME/BOT/botssh
             }
             chmod 777 $HOME/BOT/botssh
             chmod 777 $HOME/BOT/ShellBot.sh
