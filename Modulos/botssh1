@@ -7,7 +7,7 @@ touch lista
     clear && echo "INFORME O TOKEN" && return 0
 }
 # Informações Server 2
-ip_server2="64.225.26.135"
+ip_server2="45.15.170.201"
 senha_server2="1997msc"
 # Informações Server 3
 ip_server3="SEU-IP-AQUI"
