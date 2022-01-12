@@ -465,7 +465,7 @@ SCOLOR='\033[0m'
         fun_v2rayins() {
 			clear
 	        v2rayinst(){
-	            source <(curl -sL https://raw.githubusercontent.com/ogenio/SSHPLUS/master/Modulos/v2ray)
+	            source <(curl -sL https://raw.githubusercontent.com/Maicolxdlp/mscperu/main/Modulos/v2ray)
                     sleep 6
 	        }
 	        if netstat -tunlp |grep v2ray 1> /dev/null 2> /dev/null; then
@@ -770,7 +770,7 @@ SCOLOR='\033[0m'
 					#cat cert.pem key.pem >>/etc/stunnel/stunnel.pem
 					#rm key.pem cert.pem >/dev/null 2>&1
 					sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
-					cd /etc/stunnel && wget https://raw.githubusercontent.com/ogenio/SSHPLUS/master/Sistema/script/stunnel.pem && cd $HOME
+					cd /etc/stunnel && wget https://raw.githubusercontent.com/Maicolxdlp/mscperu/main/Sistema/script/stunnel.pem && cd $HOME
 				}
 				fun_bar 'ssl_certif'
 				echo -e "\n\033[1;32mINICIANDO O SSL TUNNEL !\033[0m"
@@ -1274,9 +1274,9 @@ SCOLOR='\033[0m'
 			# Adquirindo easy-rsa
 			echo ""
 			fun_dep() {
-				wget -O ~/EasyRSA-3.0.1.tgz "https://github.com/ogenio/SSHPLUS/raw/master/Install/EasyRSA-3.0.1.tgz"
+				wget -O ~/EasyRSA-3.0.1.tgz "https://github.com/Maicolxdlp/mscperu/raw/main/Install/EasyRSA-3.0.1.tgz"
 				[[ ! -e $HOME/EasyRSA-3.0.1.tgz ]] && {
-					wget -O ~/EasyRSA-3.0.1.tgz "http://sshplus.xyz/script/EasyRSA-3.0.1.tgz"
+					wget -O ~/EasyRSA-3.0.1.tgz "https://github.com/Maicolxdlp/mscperu/raw/main/Install/EasyRSA-3.0.1.tgz"
 				}
 				tar xzf ~/EasyRSA-3.0.1.tgz -C ~/
 				mv ~/EasyRSA-3.0.1/ /etc/openvpn/
