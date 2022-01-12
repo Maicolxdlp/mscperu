@@ -50,7 +50,7 @@ grep -v ^$usuario[[:space:]] /root/usuarios.db > /tmp/ph ; cat /tmp/ph > /root/u
 rm /etc/SSHPlus/senha/$usuario > /dev/null 2>&1
 rm -rf /etc/SSHPlus/userteste/$usuario.sh" > /etc/SSHPlus/userteste/$usuario.sh
     chmod +x /etc/SSHPlus/userteste/$usuario.sh
-    at -f /etc/SSHPlus/userteste/$usuario.sh now + $tempo hour > /dev/null 2>&1
+    at -f /etc/SSHPlus/userteste/$usuario.sh now + $tempo min > /dev/null 2>&1
     echo ${callback_query_from_id} >> lista
     # - ENVIA O SSH
     ShellBot.sendMessage --chat_id ${callback_query_message_chat_id} \
