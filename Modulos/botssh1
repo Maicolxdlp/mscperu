@@ -34,7 +34,7 @@ menu() {
 # - funcao criar ssh
 criarteste() {
   
-    usuario=$(echo MSC$(( RANDOM% + 2500 )))
+    usuario=$(echo MSC$(( RANDOM% + 25000 )))
     senha='12345'
     limite='2'
     tempo='30'
@@ -62,7 +62,7 @@ rm -rf /etc/SSHPlus/userteste/$usuario.sh" > /etc/SSHPlus/userteste/$usuario.sh
 # - funcao criar ssh 2
 criarteste2() {
   
-    usuario=$(echo PRE$(( RANDOM% + 2500 )))
+    usuario=$(echo PRE$(( RANDOM% + 25000 )))
     senha='12345'
     limite='2'
     tempo='30'
