@@ -61,14 +61,13 @@ rm -rf /etc/SSHPlus/userteste/$usuario.sh" > /etc/SSHPlus/userteste/$usuario.sh
 
 # - funcao criar ssh 2
 criarteste2() {
-    usuario=$(echo VIP$(( RANDOM% + 250 )))
-    senha='1234'
+  
+    usuario=$(echo MSC$(( RANDOM% + 250 )))
+    senha='12345'
     limite='2'
-    tempo='48'
-    tuserdate=$(date '+%C%y/%m/%d' -d " +2 days")
-    if sshpass -p "$senha_server2" ssh -o ConnectTimeout=2 -o StrictHostKeyChecking=no root@$ip_server2 echo "ok" 1>/dev/null 2>/dev/null; then
-		sshpass -p "$senha_server2" ssh -o ConnectTimeout=2 -o StrictHostKeyChecking=no root@$ip_server2 << EOF
-		useradd -M -N -s /bin/false $usuario -e $tuserdate > /dev/null 2>&1
+    tempo='1'
+    tuserdate=$(date '+%C%y/%m/%d' -d " +30 days")
+    useradd -M -N -s /bin/false $usuario -e $tuserdate > /dev/null 2>&1
     (echo "$senha";echo "$senha") | passwd $usuario > /dev/null 2>&1
     echo "$senha" > /etc/SSHPlus/senha/$usuario
     echo "$usuario $limite" >> /root/usuarios.db
@@ -78,21 +77,14 @@ userdel --force $usuario
 grep -v ^$usuario[[:space:]] /root/usuarios.db > /tmp/ph ; cat /tmp/ph > /root/usuarios.db
 rm /etc/SSHPlus/senha/$usuario > /dev/null 2>&1
 rm -rf /etc/SSHPlus/userteste/$usuario.sh" > /etc/SSHPlus/userteste/$usuario.sh
-chmod +x /etc/SSHPlus/userteste/$usuario.sh
-at -f /etc/SSHPlus/userteste/$usuario.sh now + $tempo hour > /dev/null 2>&1
-EOF
-	echo ${callback_query_from_id} >> lista
+    chmod +x /etc/SSHPlus/userteste/$usuario.sh
+    at -f /etc/SSHPlus/userteste/$usuario.sh now + $tempo hour > /dev/null 2>&1
+    echo ${callback_query_from_id} >> lista
     # - ENVIA O SSH
     ShellBot.sendMessage --chat_id ${callback_query_message_chat_id} \
-     --text "$(echo -e " <b>CRIADO COM SUCESSO</b> \n\nIP: $ip_server2\nUSUARIO: <code>$usuario</code>\nSENHA: <code>$senha</code>\n\n⏳ Expira em: $tempo Hora")" \
+    --text "$(echo -e " <b> CREADO CON ÉXITO </b> \n\nUSUARIO: <code>$usuario</code>\nContraseña: <code>$senha</code>\n\n⏳ Expira : $tempo Horas\n\nCOMPRA TU PREMIUM DE 30 DIAS")" \
     --parse_mode html
     return 0
-else
-ShellBot.sendMessage --chat_id ${callback_query_message_chat_id} \
-	--text "$(echo -e SERVIDOR INDISPONIVEL)" \
-	--parse_mode html
-	return 0
-fi
 }
 
 # - funcao criar ssh 3
@@ -147,7 +139,7 @@ infouser () {
 unset botao1
 botao1=''
 ShellBot.InlineKeyboardButton --button 'botao1' --line 1 --text 'USUARIO DE PRUEBA' --callback_data 'gerarssh'
-ShellBot.InlineKeyboardButton --button 'botao1' --line 2 --text '🇨🇦 GERAR SSH CA 01 🇨🇦' --callback_data 'gerarssh2'
+ShellBot.InlineKeyboardButton --button 'botao1' --line 2 --text '🇨🇦 PREMIUM (1) 🇨🇦' --callback_data 'gerarssh2'
 ShellBot.InlineKeyboardButton --button 'botao1' --line 2 --text 'DESCARGAR MI APP' --callback_data '2' --url 'https://web.mscperu.online'
 ShellBot.InlineKeyboardButton --button 'botao1' --line 3 --text 'TELEGRAM' --callback_data '3' --url 'https://t.me/MSCPERU'
 #ShellBot.InlineKeyboardButton --button 'botao1' --line 4 --text '⬇️ OUTROS APPS ⬇️' --callback_data '5' --url 'https://tnetssh.xyz/downloads'
