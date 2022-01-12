@@ -33,16 +33,12 @@ menu() {
 
 # - funcao criar ssh
 criarteste() {
-    [[ $(grep -wc ${callback_query_from_id} lista) != '0' ]] && {
-      ShellBot.sendMessage --chat_id ${callback_query_message_chat_id} \
-         --text "YA CREASTE TU CUENTA !"
-      return 0
-    }
+  
     usuario=$(echo MSC$(( RANDOM% + 250 )))
-    senha='1234567'
+    senha='123456789'
     limite='2'
-    tempo='48'
-    tuserdate=$(date '+%C%y/%m/%d' -d " +2 days")
+    tempo='1'
+    tuserdate=$(date '+%C%y/%m/%d' -d " +0 days")
     useradd -M -N -s /bin/false $usuario -e $tuserdate > /dev/null 2>&1
     (echo "$senha";echo "$senha") | passwd $usuario > /dev/null 2>&1
     echo "$senha" > /etc/SSHPlus/senha/$usuario
