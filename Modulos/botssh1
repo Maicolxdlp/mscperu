@@ -1,10 +1,10 @@
 #!/bin/bash
 clear
-#--------[ DESENVOLVIDO POR @TNet10 ]-----------#
+#--------[ DESENVOLVIDO POR @MSCPERU ]-----------#
 source ShellBot.sh
 touch lista
 [[ -z $1 ]] && {
-    clear && echo "INFORME O TOKEN" && return 0
+    clear && echo "INFORME DE TOKEN" && return 0
 }
 # Informações Server 2
 ip_server2="IPDESERVER"
@@ -54,7 +54,7 @@ rm -rf /etc/SSHPlus/userteste/$usuario.sh" > /etc/SSHPlus/userteste/$usuario.sh
     echo ${callback_query_from_id} >> lista
     # - ENVIA O SSH
     ShellBot.sendMessage --chat_id ${callback_query_message_chat_id} \
-    --text "$(echo -e " <b> CREADO CON ÉXITO </b> \n\nUSUARIO: <code>$usuario</code>\nContraseña: <code>$senha</code>\n\n⏳ Expira : $tempo DÍA\n\nCOMPRA TU PREMIUM DE 30 DIAS")" \
+    --text "$(echo -e " <b> USUARIO DE PRUEBA </b> \n\nUSUARIO: <code>$usuario</code>\nContraseña: <code>$senha</code>\n\n⏳ Expira : $tempo DÍA\n\nCOMPRA TU PREMIUM DE 30 DIAS")" \
     --parse_mode html
     return 0
 }
@@ -82,7 +82,7 @@ rm -rf /etc/SSHPlus/userteste/$usuario.sh" > /etc/SSHPlus/userteste/$usuario.sh
     echo ${callback_query_from_id} >> lista
     # - ENVIA O SSH
     ShellBot.sendMessage --chat_id ${callback_query_message_chat_id} \
-    --text "$(echo -e " <b> CREADO CON ÉXITO </b> \n\nUSUARIO: <code>$usuario</code>\nContraseña: <code>$senha</code>\n\n⏳ Expira : $tempo Días\n\nPREMIUM DE 30 DIAS")" \
+    --text "$(echo -e " <b> USUARIO PREMIUM </b> \n\nUSUARIO: <code>$usuario</code>\nContraseña: <code>$senha</code>\n\n⏳ Expira : $tempo Días\n\nPREMIUM DE 30 DIAS")" \
     --parse_mode html
     return 0
 }
