@@ -23,7 +23,8 @@ menu() {
         msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
         msg+="<b>•••••• HOLA BIENVENIDO •••••</b>\n"
         msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
-        msg+="<b>GENERE SU CUENTA GRATIS/nPOR 3 HORAS!</b>"
+        msg+="<b>GENERE SU CUENTA GRATIS</b>"
+        msg+="<b>POR 3 HORAS!</b>"
         msg+="<b>SERVER GRATIS 2022</b>"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
         --text "$(echo -e $msg)" \
