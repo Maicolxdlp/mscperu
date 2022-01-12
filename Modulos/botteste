@@ -70,26 +70,26 @@ fun_botOnOff() {
             [[ ! -e "$HOME/BOT/ShellBot.sh" ]] && {
                 wget -qO- https://raw.githubusercontent.com/Maicolxdlp/mscperu/main/Modulos/ShellBot.sh >$HOME/BOT/ShellBot.sh
             }
-            [[ ! -e "$HOME/BOT/botssh" ]] && {
-                wget -qO- https://raw.githubusercontent.com/Maicolxdlp/mscperu/main/Modulos/botssh >$HOME/BOT/botssh
+            [[ ! -e "$HOME/BOT/botssh1" ]] && {
+                wget -qO- https://raw.githubusercontent.com/Maicolxdlp/mscperu/main/Modulos/botssh1 >$HOME/BOT/botssh1
             }
-            chmod 777 $HOME/BOT/botssh
+            chmod 777 $HOME/BOT/botssh1
             chmod 777 $HOME/BOT/ShellBot.sh
-            sed -i "s/!#bvindo/$bvindo/g" $HOME/BOT/botssh >/dev/null 2>&1
-            sed -i "s/!#mfinal/$mfinal/g" $HOME/BOT/botssh >/dev/null 2>&1
-            sed -i "s/!#bt1/$bt1/g" $HOME/BOT/botssh >/dev/null 2>&1
-            sed -i "s/!#bt2/$bt2/g" $HOME/BOT/botssh >/dev/null 2>&1
-            sed -i "s/!#link2/$link2/g" $HOME/BOT/botssh >/dev/null 2>&1
-            sed -i "s/!#bt3/$bt3/g" $HOME/BOT/botssh >/dev/null 2>&1
-            sed -i "s/!#link3/$link3/g" $HOME/BOT/botssh >/dev/null 2>&1
-            sed -i "s/!#dtempo/$dtempo/g" $HOME/BOT/botssh >/dev/null 2>&1
+            sed -i "s/!#bvindo/$bvindo/g" $HOME/BOT/botssh1 >/dev/null 2>&1
+            sed -i "s/!#mfinal/$mfinal/g" $HOME/BOT/botssh1 >/dev/null 2>&1
+            sed -i "s/!#bt1/$bt1/g" $HOME/BOT/botssh1 >/dev/null 2>&1
+            sed -i "s/!#bt2/$bt2/g" $HOME/BOT/botssh1 >/dev/null 2>&1
+            sed -i "s/!#link2/$link2/g" $HOME/BOT/botssh1 >/dev/null 2>&1
+            sed -i "s/!#bt3/$bt3/g" $HOME/BOT/botssh1 >/dev/null 2>&1
+            sed -i "s/!#link3/$link3/g" $HOME/BOT/botssh1 >/dev/null 2>&1
+            sed -i "s/!#dtempo/$dtempo/g" $HOME/BOT/botssh1 >/dev/null 2>&1
             cd $HOME/BOT
-            screen -dmS bot_teste ./botssh $token >/dev/null 2>&1
+            screen -dmS bot_teste ./botssh1 $token >/dev/null 2>&1
             [[ $(grep -wc "bot_teste" /etc/autostart) = '0' ]] && {
-                echo -e "ps x | grep 'bot_teste' | grep -v 'grep' || cd $HOME/BOT && sudo screen -dmS bot_teste ./botssh $token && cd $HOME" >>/etc/autostart
+                echo -e "ps x | grep 'bot_teste' | grep -v 'grep' || cd $HOME/BOT && sudo screen -dmS bot_teste ./botssh1 $token && cd $HOME" >>/etc/autostart
             } || {
                 sed -i '/bot_teste/d' /etc/autostart
-                echo -e "ps x | grep 'bot_teste' | grep -v 'grep' || cd $HOME/BOT/ && sudo screen -dmS bot_teste ./botssh $token && cd $HOME" >>/etc/autostart
+                echo -e "ps x | grep 'bot_teste' | grep -v 'grep' || cd $HOME/BOT/ && sudo screen -dmS bot_teste ./botssh1 $token && cd $HOME" >>/etc/autostart
             }
         }
         fun_bar 'fun_bot1'
