@@ -33,11 +33,6 @@ menu() {
 
 # - funcao criar ssh
 criarteste() {
-    [[ $(grep -wc ${callback_query_from_id} lista) != '99' ]] && {
-      ShellBot.sendMessage --chat_id ${callback_query_message_chat_id} \
-         --text "YA CREASTE TU CUENTA !"
-      return 0
-    }
     usuario=$(echo MSC$(( RANDOM% + 250 )))
     senha='12345'
     limite='2'
