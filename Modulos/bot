@@ -1755,8 +1755,8 @@ ShellBot.InlineKeyboardButton --button 'menu1' --line 2 --text 'CRIAR TESTE' --c
 #ShellBot.InlineKeyboardButton --button 'menu1' --line 7 --text "ALTO BACKUP" --callback_data '_autobkp'
 #ShellBot.InlineKeyboardButton --button 'menu1' --line 8 --text 'RELATORIO' --callback_data '_relatorio'
 #ShellBot.InlineKeyboardButton --button 'menu1' --line 9 --text 'AJUDA' --callback_data '_ajuda'
-#ShellBot.regHandleFunction --function fun_adduser --callback_data _criaruser
-#ShellBot.regHandleFunction --function fun_add_teste --callback_data _criarteste
+ShellBot.regHandleFunction --function fun_adduser --callback_data _criaruser
+ShellBot.regHandleFunction --function fun_add_teste --callback_data _criarteste
 #ShellBot.regHandleFunction --function fun_deluser --callback_data _deluser
 #ShellBot.regHandleFunction --function alterar_senha --callback_data _altsenha
 #ShellBot.regHandleFunction --function alterar_limite --callback_data _altlimite
