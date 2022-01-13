@@ -1739,40 +1739,40 @@ unset menu1
 menu1=''
 ShellBot.InlineKeyboardButton --button 'menu1' --line 1 --text 'CRIAR USUARIO' --callback_data '_criaruser'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 2 --text 'CRIAR TESTE' --callback_data '_criarteste'
-#ShellBot.InlineKeyboardButton --button 'menu1' --line 3 --text 'REMOVER' --callback_data '_deluser'
-#ShellBot.InlineKeyboardButton --button 'menu1' --line 4 --text 'ALTERAR SENHA' --callback_data '_altsenha'
-#ShellBot.InlineKeyboardButton --button 'menu1' --line 5 --text 'ALTERAR LIMITE' --callback_data '_altlimite'
-#ShellBot.InlineKeyboardButton --button 'menu1' --line 6 --text 'ALTERAR DATA' --callback_data '_altdata'
-#ShellBot.InlineKeyboardButton --button 'menu1' --line 7 --text 'USUARIOS ONLINE' --callback_data '_monitor'
-#ShellBot.InlineKeyboardButton --button 'menu1' --line 8 --text 'INFO USUARIOS' --callback_data '_verusers'
-#ShellBot.InlineKeyboardButton --button 'menu1' --line 9 --text 'EXPIRADOS' --callback_data '_expirados'
-#ShellBot.InlineKeyboardButton --button 'menu1' --line 1 --text 'INFO VPS' --callback_data '_infovps'
-#ShellBot.InlineKeyboardButton --button 'menu1' --line 2 --text 'OTIMIZAR' --callback_data '_otimizar'
-#ShellBot.InlineKeyboardButton --button 'menu1' --line 3 --text 'ARQUIVOS' --callback_data '_arqdown'
-#ShellBot.InlineKeyboardButton --button 'menu1' --line 4 --text 'REVENDA' --callback_data '_opcoesrev'
-#ShellBot.InlineKeyboardButton --button 'menu1' --line 5 --text 'SPEEDTESTE' --callback_data '_speedteste'
-#ShellBot.InlineKeyboardButton --button 'menu1' --line 6 --text 'BACKUP USUARIOS' --callback_data '_backupusers'
-#ShellBot.InlineKeyboardButton --button 'menu1' --line 7 --text "ALTO BACKUP" --callback_data '_autobkp'
-#ShellBot.InlineKeyboardButton --button 'menu1' --line 8 --text 'RELATORIO' --callback_data '_relatorio'
-#ShellBot.InlineKeyboardButton --button 'menu1' --line 9 --text 'AJUDA' --callback_data '_ajuda'
+ShellBot.InlineKeyboardButton --button 'menu1' --line 3 --text 'REMOVER' --callback_data '_deluser'
+ShellBot.InlineKeyboardButton --button 'menu1' --line 4 --text 'ALTERAR SENHA' --callback_data '_altsenha'
+ShellBot.InlineKeyboardButton --button 'menu1' --line 5 --text 'ALTERAR LIMITE' --callback_data '_altlimite'
+ShellBot.InlineKeyboardButton --button 'menu1' --line 6 --text 'ALTERAR DATA' --callback_data '_altdata'
+ShellBot.InlineKeyboardButton --button 'menu1' --line 7 --text 'USUARIOS ONLINE' --callback_data '_monitor'
+ShellBot.InlineKeyboardButton --button 'menu1' --line 8 --text 'INFO USUARIOS' --callback_data '_verusers'
+ShellBot.InlineKeyboardButton --button 'menu1' --line 9 --text 'EXPIRADOS' --callback_data '_expirados'
+ShellBot.InlineKeyboardButton --button 'menu1' --line 1 --text 'INFO VPS' --callback_data '_infovps'
+ShellBot.InlineKeyboardButton --button 'menu1' --line 2 --text 'OTIMIZAR' --callback_data '_otimizar'
+ShellBot.InlineKeyboardButton --button 'menu1' --line 3 --text 'ARQUIVOS' --callback_data '_arqdown'
+ShellBot.InlineKeyboardButton --button 'menu1' --line 4 --text 'REVENDA' --callback_data '_opcoesrev'
+ShellBot.InlineKeyboardButton --button 'menu1' --line 5 --text 'SPEEDTESTE' --callback_data '_speedteste'
+ShellBot.InlineKeyboardButton --button 'menu1' --line 6 --text 'BACKUP USUARIOS' --callback_data '_backupusers'
+ShellBot.InlineKeyboardButton --button 'menu1' --line 7 --text "ALTO BACKUP" --callback_data '_autobkp'
+ShellBot.InlineKeyboardButton --button 'menu1' --line 8 --text 'RELATORIO' --callback_data '_relatorio'
+ShellBot.InlineKeyboardButton --button 'menu1' --line 9 --text 'AJUDA' --callback_data '_ajuda'
 ShellBot.regHandleFunction --function fun_adduser --callback_data _criaruser
 ShellBot.regHandleFunction --function fun_add_teste --callback_data _criarteste
-#ShellBot.regHandleFunction --function fun_deluser --callback_data _deluser
-#ShellBot.regHandleFunction --function alterar_senha --callback_data _altsenha
-#ShellBot.regHandleFunction --function alterar_limite --callback_data _altlimite
-#ShellBot.regHandleFunction --function alterar_data --callback_data _altdata
-#ShellBot.regHandleFunction --function fun_down --callback_data _arqdown
-#ShellBot.regHandleFunction --function monitor_ssh --callback_data _monitor
-#ShellBot.regHandleFunction --function ver_users --callback_data _verusers
-#ShellBot.regHandleFunction --function fun_exp_user --callback_data _expirados
-#ShellBot.regHandleFunction --function otimizer --callback_data _otimizar
-#ShellBot.regHandleFunction --function speed_test --callback_data _speedteste
-#ShellBot.regHandleFunction --function infovps --callback_data _infovps
-#ShellBot.regHandleFunction --function backup_users --callback_data _backupusers
-#ShellBot.regHandleFunction --function fun_backauto --callback_data _autobkp
-#ShellBot.regHandleFunction --function relatorio_rev --callback_data _relatorio
-#ShellBot.regHandleFunction --function fun_ajuda --callback_data _ajuda
-#ShellBot.regHandleFunction --function fun_menurevenda --callback_data _opcoesrev
+ShellBot.regHandleFunction --function fun_deluser --callback_data _deluser
+ShellBot.regHandleFunction --function alterar_senha --callback_data _altsenha
+ShellBot.regHandleFunction --function alterar_limite --callback_data _altlimite
+ShellBot.regHandleFunction --function alterar_data --callback_data _altdata
+ShellBot.regHandleFunction --function fun_down --callback_data _arqdown
+ShellBot.regHandleFunction --function monitor_ssh --callback_data _monitor
+ShellBot.regHandleFunction --function ver_users --callback_data _verusers
+ShellBot.regHandleFunction --function fun_exp_user --callback_data _expirados
+ShellBot.regHandleFunction --function otimizer --callback_data _otimizar
+ShellBot.regHandleFunction --function speed_test --callback_data _speedteste
+ShellBot.regHandleFunction --function infovps --callback_data _infovps
+ShellBot.regHandleFunction --function backup_users --callback_data _backupusers
+ShellBot.regHandleFunction --function fun_backauto --callback_data _autobkp
+ShellBot.regHandleFunction --function relatorio_rev --callback_data _relatorio
+ShellBot.regHandleFunction --function fun_ajuda --callback_data _ajuda
+ShellBot.regHandleFunction --function fun_menurevenda --callback_data _opcoesrev
 unset keyboard1
 keyboard1="$(ShellBot.InlineKeyboardMarkup -b 'menu1')"
 
