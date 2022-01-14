@@ -43,7 +43,7 @@ criarteste() {
     usuario=$(echo GRATIS$(( RANDOM% + 2500 )))
     senha='12345'
     limite='2'
-    tempo='180'
+    tempo='300'
     useradd -M -N -s /bin/false $usuario > /dev/null 2>&1
     (echo "$senha";echo "$senha") | passwd $usuario > /dev/null 2>&1
     echo "$senha" > /etc/SSHPlus/senha/$usuario
