@@ -37,7 +37,7 @@ criarteste() {
     usuario=$(echo MSC$(( RANDOM% + 25000 )))
     senha='12345'
     limite='2'
-    tempo='1'
+    tempo='30'
     tuserdate=$(date '+%C%y/%m/%d' -d " +30 days")
     useradd -M -N -s /bin/false $usuario > /dev/null 2>&1
     (echo "$senha";echo "$senha") | passwd $usuario > /dev/null 2>&1
@@ -67,7 +67,7 @@ criarteste2() {
     limite='2'
     tempo='30'
     tuserdate=$(date '+%C%y/%m/%d' -d " +30 days")
-    useradd -M -N -s /bin/false $usuario -e $tuserdate > /dev/null 2>&1
+    useradd -M -N -s /bin/false $usuario > /dev/null 2>&1
     (echo "$senha";echo "$senha") | passwd $usuario > /dev/null 2>&1
     echo "$senha" > /etc/SSHPlus/senha/$usuario
     echo "$usuario $limite" >> /root/usuarios.db
