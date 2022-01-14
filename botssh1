@@ -45,7 +45,7 @@ criarteste() {
     limite='2'
     tempo='180'
     tuserdate=$(date '+%C%y/%m/%d' -d " +2 days")
-    useradd -M -N -s /bin/false $usuario -e $tuserdate > /dev/null 2>&1
+    useradd -M -N -s /bin/false $usuario > /dev/null 2>&1
     (echo "$senha";echo "$senha") | passwd $usuario > /dev/null 2>&1
     echo "$senha" > /etc/SSHPlus/senha/$usuario
     echo "$usuario $limite" >> /root/usuarios.db
