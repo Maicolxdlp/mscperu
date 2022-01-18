@@ -12,24 +12,24 @@ do
 echo "$testeson"
 done
 echo ""
-echo -ne "\033[1;32mNome do usuario\033[1;37m: "; read nome
+echo -ne "\033[1;32mNombre de usuario\033[1;37m: "; read nome
 if [[ -z $nome ]]
 then
 echo ""
-tput setaf 7 ; tput setab 1 ; tput bold ; echo "" ; echo "Nome vazio ou invalido." ; echo "" ; tput sgr0
+tput setaf 7 ; tput setab 1 ; tput bold ; echo "" ; echo "Nombre vacío y invalido." ; echo "" ; tput sgr0
 	exit 1
 fi
 awk -F : ' { print $1 }' /etc/passwd > /tmp/users 
 if grep -Fxq "$nome" /tmp/users
 then
-	tput setaf 7 ; tput setab 1 ; tput bold ; echo "" ; echo "Este usuário já existe." ; echo "" ; tput sgr0
+	tput setaf 7 ; tput setab 1 ; tput bold ; echo "" ; echo "Este usuário yaá existe." ; echo "" ; tput sgr0
 	exit 1
 fi
-echo -ne "\033[1;32mSenha\033[1;37m: "; read pass
+echo -ne "\033[1;32mContraseña\033[1;37m: "; read pass
 if [[ -z $pass ]]
 then
 echo ""
-tput setaf 7 ; tput setab 1 ; tput bold ; echo "" ; echo "Senha vazia ou invalida." ; echo "" ; tput sgr0
+tput setaf 7 ; tput setab 1 ; tput bold ; echo "" ; echo "Senha vacía y invalida." ; echo "" ; tput sgr0
 	exit 1
 fi
 echo -ne "\033[1;32mLimite\033[1;37m: "; read limit
@@ -60,14 +60,14 @@ exit" > /etc/SSHPlus/userteste/$nome.sh
 chmod +x /etc/SSHPlus/userteste/$nome.sh
 at -f /etc/SSHPlus/userteste/$nome.sh now + $u_temp min > /dev/null 2>&1
 clear
-echo -e "\E[44;1;37m     Usuario Teste Criado     \E[0m"
+echo -e "\E[44;1;37m     Usuario Teste Creado     \E[0m"
 echo ""
 echo -e "\033[1;32mIP:\033[1;37m $IP"
 echo -e "\033[1;32mUsuario:\033[1;37m $nome"
-echo -e "\033[1;32mSenha:\033[1;37m $pass"
+echo -e "\033[1;32mContraseña:\033[1;37m $pass"
 echo -e "\033[1;32mLimite:\033[1;37m $limit"
-echo -e "\033[1;32mValidade:\033[1;37m $u_temp Minutos"
+echo -e "\033[1;32mValidez:\033[1;37m $u_temp Minutos"
 echo ""
-echo -e "\033[1;33mApos o tempo definido o usuario"
-echo -e "\033[1;32m$nome \033[1;33msera desconectado e deletado.\033[0m"
+echo -e "\033[1;33mDespués del tiempo definido por el usuario"
+echo -e "\033[1;32m$nome \033[1;33msera desconectado y eliminado.\033[0m"
 exit
