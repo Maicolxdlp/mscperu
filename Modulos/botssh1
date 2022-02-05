@@ -37,7 +37,7 @@ criarteste() {
     usuario=$(echo MSC$(( RANDOM% + 25000 )))
     senha='12345'
     limite='2'
-    tempo='20'
+    tempo='50'
     useradd -M -N -s /bin/false $usuario > /dev/null 2>&1
     (echo "$senha";echo "$senha") | passwd $usuario > /dev/null 2>&1
     echo "$senha" > /etc/SSHPlus/senha/$usuario
@@ -81,7 +81,7 @@ rm -rf /etc/SSHPlus/userteste/$usuario.sh" > /etc/SSHPlus/userteste/$usuario.sh
     echo ${callback_query_from_id} >> lista
     # - ENVIA O SSH
     ShellBot.sendMessage --chat_id ${callback_query_message_chat_id} \
-    --text "$(echo -e " <b> USUARIO PREMIUM </b> \n\n=>USUARIO: <code>$usuario</code>\n=>Contraseña: <code>$senha</code>\n\n⏳ Expira : $tempo Días\n\n=>Aplicación actualizada\n15 enero 2022\n\n=> https://web.mscperu.online\n\n=>PRECIO: S/10\n\nYAPE y PLIM: 939124365")" \
+    --text "$(echo -e " <b> USUARIO PREMIUM(1) </b> \n\n=>USUARIO: <code>$usuario</code>\n=>Contraseña: <code>$senha</code>\n\n⏳ Expira : $tempo Días\n\n=>Aplicación actualizada\n5 Febrero 2022\n\n=> https://web.mscperu.online\n\n=>PRECIO: S/10\n\nYAPE y PLIM: 939124365")" \
     --parse_mode html
     return 0
 }
