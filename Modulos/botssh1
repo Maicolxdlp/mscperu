@@ -23,7 +23,7 @@ menu() {
         msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
         msg+="<b>•••••• HOLA BIENVENIDO •••••</b>\n"
         msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
-        msg+="SERVER PREMIUM (1)!"
+        msg+="SERVER PREMIUM (MSC)!"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
         --text "$(echo -e $msg)" \
         --reply_markup "$keyboard1" \
