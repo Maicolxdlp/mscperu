@@ -552,7 +552,7 @@ case "$x" in
    clear
    echo -e "\033[1;32mPARA SAIR CLICK CTRL + C\033[1;36m"
    sleep 2
-   nethogs -v 3
+   nload
    ;;
    p)
    menu2
