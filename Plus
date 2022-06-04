@@ -79,6 +79,7 @@ cd > /dev/null 2>&1
 echo ""
 echo -e "\033[1;33mInstalando, paquetes EXTRAS \033[1;32m( HTOP + GLANCES + ETC )"
 sleep 3s
+apt install python -y > /dev/null 2>&1
 apt-get install screen -y > /dev/null 2>&1
 apt-get install htop -y > /dev/null 2>&1
 apt-get install iptables -y > /dev/null 2>&1
